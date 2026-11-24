@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+  <channel>
+    <title>Wavehop Beta Changelog</title>
+    <link>https://drsvenkuehn.github.io/wavehop-releases/appcast-beta.xml</link>
+    <description>Most recent changes to Wavehop</description>
+    <language>en</language>
+  </channel>
+</rss>
