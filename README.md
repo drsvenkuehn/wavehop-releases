@@ -2,7 +2,7 @@
 
 **Stream your Windows PC's sound to AirPlay speakers.** Wavehop lives in the system tray, captures what your PC plays and sends it to HomePods, AirPlay speakers and soundbars on your network, alone or as a synchronized multi-room group. No drivers, no virtual audio devices.
 
-Wavehop is **free** (closed source). [Download the latest release](https://github.com/drsvenkuehn/wavehop-releases/releases/latest) | [Buy me a coffee](https://buymeacoffee.com/drsvenkuehn)
+Wavehop is **free** (closed source). [Download the newest release](https://github.com/drsvenkuehn/wavehop-releases/releases) | [Buy me a coffee](https://buymeacoffee.com/drsvenkuehn)
 
 > **Beta.** Wavehop is in public beta. Expect rough edges and please report what you find (see below).
 
@@ -16,7 +16,7 @@ Wavehop is **free** (closed source). [Download the latest release](https://githu
 
 ## System requirements
 
-- Windows 10 version 1903 or later, or Windows 11 (64-bit)
+- Windows 11 (64-bit). Windows 10 version 1903 or later may work but is untested.
 - A speaker or receiver with AirPlay on the same network (wired or Wi-Fi, same subnet)
 - Windows firewall: Wavehop's installer adds a rule for **Private** networks. On a "Public" network, set the network to Private or Wavehop will show guidance.
 
@@ -32,7 +32,7 @@ Other AirPlay speakers should work but are untested. If yours works or fails, te
 
 ## Install
 
-1. Download `Wavehop-<version>-win64-setup.exe` from the [latest release](https://github.com/drsvenkuehn/wavehop-releases/releases/latest). (Prefer no installer? Use the `...-portable.zip` and run `Wavehop.exe`.)
+1. Download `Wavehop-<version>-win64-setup.exe` from the newest entry on the [releases page](https://github.com/drsvenkuehn/wavehop-releases/releases). (Prefer no installer? Use the `...-portable.zip` and run `Wavehop.exe`.)
 2. Run it. Windows may show a SmartScreen warning, see below.
 3. Wavehop appears in the system tray (click the `^` if hidden). Click it and choose a speaker.
 
@@ -45,7 +45,7 @@ Beta builds are **not code-signed yet**. A signing certificate costs money and b
 
 You can check the download is the one published here: it comes only from this repository's Releases page. Updates inside Wavehop are cryptographically signed and verified before they install.
 
-## Known issues (beta 1)
+## Known issues (beta)
 
 - Long-duration (multi-hour) stability and some speaker models have not been tested yet.
 - AirPlay 1 timing numbers were not measured in detail.

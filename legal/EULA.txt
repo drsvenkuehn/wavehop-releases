@@ -1,0 +1,89 @@
+WAVEHOP END-USER LICENSE AGREEMENT
+Version 1.0, 2026-11-22
+
+Please read this agreement. By installing or using Wavehop you accept it. If
+you do not accept it, do not install or use Wavehop.
+
+1. Who we are
+   "Wavehop" is software published by Sven Kuehn ("the Publisher").
+
+2. Free of charge
+   Wavehop is provided free of charge. There are no license keys, trials or
+   paid features. Voluntary support (for example through Buy Me a Coffee,
+   https://buymeacoffee.com/drsvenkuehn) gives you no additional rights.
+
+3. License
+   The Publisher grants you a personal, non-exclusive, non-transferable,
+   revocable license to install and use Wavehop on computers you own or
+   control, for private or business use, free of charge. You may make copies
+   for backup and may redistribute the unmodified installer or portable ZIP as
+   published by the Publisher, free of charge.
+
+4. Restrictions
+   Wavehop is proprietary. Its source code is not published. You may not sell,
+   rent or sublicense Wavehop, remove copyright or license notices, or modify it
+   and distribute the result. You may not reverse engineer, decompile or
+   disassemble Wavehop, except to the extent that applicable law expressly
+   permits this despite this restriction. Components of third parties that are
+   included in Wavehop remain under their own licenses; see
+   THIRD-PARTY-NOTICES.txt. Nothing in this agreement limits your rights under
+   those licenses.
+
+5. Ownership
+   Wavehop and all rights in it remain with the Publisher and the respective
+   third-party owners. This agreement does not transfer ownership.
+
+6. Updates
+   Wavehop checks for updates automatically. It contacts the Publisher's update
+   feed (hosted on GitHub) when it starts and periodically. You can turn
+   automatic update checks off in Wavehop. Updates are signed; Wavehop installs
+   only updates with a valid signature. See PRIVACY.md for what a check reveals.
+
+7. Crash and problem reports (opt-in)
+   Wavehop can send crash reports and problem reports with log files to the
+   Publisher. This is off until you explicitly agree, and you can change your
+   choice at any time. What is sent is described in PRIVACY.md.
+
+8. No warranty
+   Wavehop is provided "as is" and "as available", without warranty of any
+   kind, express or implied, including fitness for a particular purpose,
+   compatibility with a particular speaker or network, uninterrupted or
+   error-free operation, or non-infringement, to the extent permitted by
+   applicable law. Wavehop is beta software and may stop or misbehave.
+
+9. Limitation of liability
+   To the extent permitted by applicable law, the Publisher is not liable for
+   any indirect, incidental or consequential damages, loss of data or loss of
+   profits arising from the use of or inability to use Wavehop. Liability for
+   unlawful intent or gross negligence, and any other liability that cannot be
+   excluded by law, remains unaffected.
+
+10. Third-party trademarks
+   AirPlay, HomePod, Bonjour and Apple are trademarks of Apple Inc. Other names
+   belong to their owners. Wavehop is an independent product and is not
+   affiliated with or endorsed by Apple Inc.
+
+11. Termination
+   This license ends automatically if you breach it. You can end it at any time
+   by uninstalling Wavehop and deleting all copies. Sections 4, 5, 8, 9 and 13
+   continue to apply after the license ends.
+
+12. Changes
+   The Publisher may publish a new version of this agreement with a new
+   Wavehop version. Continued use of that version means you accept it. If you
+   do not accept the new version of the agreement, do not install the update;
+   the version you already have stays under the agreement you accepted for it.
+
+13. Governing law and venue
+   This agreement is governed by Swiss law, excluding its conflict-of-laws
+   rules and the UN Convention on Contracts for the International Sale of Goods.
+   The courts at the Publisher's place of residence in Switzerland have
+   jurisdiction, subject to mandatory consumer-protection rules that give you
+   another venue.
+
+14. Severability and entire agreement
+   If a provision is invalid, the rest of this agreement stays in force. This
+   agreement, together with the third-party licenses referred to in section 4,
+   is the entire agreement between you and the Publisher about Wavehop.
+
+Contact: contact.wavehop@gmail.com
