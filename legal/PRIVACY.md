@@ -1,6 +1,6 @@
 # Wavehop Privacy Policy
 
-Version 1.0, 2026-11-22. Publisher: Sven Kuehn, Switzerland.
+Version 1.1, 2026-11-26. Publisher: Sven Kuehn, Switzerland.
 Contact for questions and deletion requests: `contact.wavehop@gmail.com`
 
 ## In short
@@ -23,6 +23,10 @@ Nothing is sent until you choose "yes". The default is off. You can change the c
 
 **Problem report** ("Report a Problem..."): the text you type, an optional email address you choose to give, the last two log files, the app configuration, and a system information summary. An optional minidump is only included if you take part in a crash report.
 
+**Installation ID:** every report carries a random ID that Wavehop creates on your computer (first line of `%APPDATA%\Wavehop\crashes\installation_id`). It shows which reports come from the same installation and is not derived from you or your hardware.
+
+**IP address:** Sentry receives your IP address when a report is sent, as with any web request. The project is set to store neither the address nor a location derived from it.
+
 **Redaction before sending:** IPv4 addresses are shortened to /24 (for example `192.168.1.x`); IPv6 addresses to /48; MAC addresses and speaker device IDs are hashed; speaker display names are hashed unless you tick "include speaker names"; your Windows profile path is replaced by `%USERPROFILE%`.
 
 **Never sent:** pairing keys, credentials, the controller identity, audio data.
@@ -37,7 +41,7 @@ Wavehop stores its settings, logs, and pairing information for AirPlay 2 speaker
 
 ## 4. Your rights and deletion requests
 
-You can ask what the Publisher holds about you and ask for deletion, for example of a problem report you sent. Write to the contact above and include the date and, if you gave one, the email address used in the report (Sentry events cannot otherwise be traced to a person). Requests are answered within 30 days. Swiss data protection law (FADP) applies; if you are in the EU or EEA you may also have rights under the GDPR.
+You can ask what the Publisher holds about you and ask for deletion, for example of a problem report you sent. Write to the contact above and include the date and, if you can, the installation ID or the email address used in the report (Sentry events cannot otherwise be traced to a person). Requests are answered within 30 days. Swiss data protection law (FADP) applies; if you are in the EU or EEA you may also have rights under the GDPR.
 
 ## 5. Changes
 
