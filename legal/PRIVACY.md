@@ -1,17 +1,17 @@
 # Wavehop Privacy Policy
 
-Version 1.1, 2026-11-26. Publisher: Sven Kuehn, Switzerland.
+Version 1.2, 2026-11-26. Publisher: Sven Kuehn, Switzerland.
 Contact for questions and deletion requests: `contact.wavehop@gmail.com`
 
 ## In short
 
 - Wavehop has **no analytics and no usage tracking**.
-- Two things can leave your computer: **update checks** (on by default, can be turned off) and **crash / problem reports** (off until you opt in).
+- Two things can leave your computer: **update checks** (Wavehop asks before it starts checking automatically; can be turned off) and **crash / problem reports** (off until you opt in).
 - Your audio never leaves your local network, except to the speakers you choose. Reports never contain audio, pairing keys, credentials or the controller identity.
 
 ## 1. Update checks
 
-Wavehop (via WinSparkle) downloads a small feed file (`appcast.xml` or `appcast-beta.xml`) over HTTPS from the Wavehop release feed on GitHub Pages. GitHub, as host, sees your IP address and ordinary request headers (including a user agent that names Wavehop and its version), as with any web request. The Publisher does not receive or store this data. GitHub's own privacy statement applies to what GitHub logs. You can turn automatic update checks off in Wavehop; then no check is made until you ask for one.
+Wavehop (via WinSparkle) does not check on its first start. At a later start it asks whether it may check automatically, unless this has already been set. A check downloads a small feed file (`appcast.xml` or `appcast-beta.xml`) over HTTPS from the Wavehop release feed on GitHub Pages. If a new version is found, its release notes are loaded from github.com, and the installer is downloaded from GitHub if you choose to install it. GitHub, as host, sees your IP address and ordinary request headers (including a user agent that names Wavehop and its version), as with any web request. The Publisher does not receive or store this data. GitHub's own privacy statement applies to what GitHub logs. You can turn automatic update checks off in Wavehop; then no check is made until you ask for one.
 
 ## 2. Crash reports and problem reports (opt-in)
 
@@ -21,17 +21,17 @@ Nothing is sent until you choose "yes". The default is off. You can change the c
 
 **Crash report** (when Wavehop crashes and consent is on): a minidump (program state at the crash: memory contents of the Wavehop process, which may incidentally contain data such as speaker names or network addresses), Wavehop version and channel (beta or stable), Windows version, the last roughly 200 log lines, and tags (active protocol, group size, low-latency mode).
 
-**Problem report** ("Report a Problem..."): the text you type, an optional email address you choose to give, the last two log files, the app configuration, and a system information summary. An optional minidump is only included if you take part in a crash report.
+**Problem report** ("Report a Problem..."): the text you type, an optional email address you choose to give, the last two log files and a separate copy of the most recent log lines, the app configuration, a system information summary, the Wavehop and Windows version, and the same tags as a crash report. A problem report contains no minidump. Sentry automatically screens problem reports for spam and labels them, using AI features.
 
 **Installation ID:** every report carries a random ID that Wavehop creates on your computer (first line of `%APPDATA%\Wavehop\crashes\installation_id`). It shows which reports come from the same installation and is not derived from you or your hardware.
 
 **IP address:** Sentry receives your IP address when a report is sent, as with any web request. The project is set to store neither the address nor a location derived from it.
 
-**Redaction before sending:** IPv4 addresses are shortened to /24 (for example `192.168.1.x`); IPv6 addresses to /48; MAC addresses and speaker device IDs are hashed; speaker display names are hashed unless you tick "include speaker names"; your Windows profile path is replaced by `%USERPROFILE%`.
+**Redaction before sending:** IPv4 addresses are shortened to /24 (for example `192.168.1.x`); IPv6 addresses to /48; MAC addresses and speaker device IDs are hashed; speaker display names are hashed unless you tick "include speaker names"; your Windows profile path is replaced by `%USERPROFILE%`. This applies to log text, the configuration and your description. A crash minidump is not redacted, and an email address you give is sent as typed.
 
 **Never sent:** pairing keys, credentials, the controller identity, audio data.
 
-**Limits:** at most 1 crash report and 5 problem reports per hour per installation.
+**Limits:** at most 5 problem reports per hour per installation. After repeated crashes within an hour, Wavehop pauses crash uploads for that session.
 
 **Retention:** Sentry keeps events for **30 days** on the plan used (default retention), then deletes them. If you did not opt in, a crash only leaves a local file in `%APPDATA%\Wavehop\crashes\` (up to 5, oldest deleted first), which stays on your computer.
 

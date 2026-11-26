@@ -1,8 +1,11 @@
 WAVEHOP END-USER LICENSE AGREEMENT
-Version 1.0, 2026-11-22
+Version 1.1, 2026-11-26
 
-Please read this agreement. By installing or using Wavehop you accept it. If
-you do not accept it, do not install or use Wavehop.
+Please read this agreement. The installer shows it and asks you to agree before
+it installs Wavehop. A silent installation and an update started from within
+Wavehop do not show it; the installed program includes it as EULA.txt. By
+installing or using Wavehop you accept it. If you do not accept it, do not
+install or use Wavehop.
 
 1. Who we are
    "Wavehop" is software published by Sven Kuehn ("the Publisher").
@@ -13,10 +16,12 @@ you do not accept it, do not install or use Wavehop.
    https://buymeacoffee.com/drsvenkuehn) gives you no additional rights.
 
 3. License
-   The Publisher grants you a personal, non-exclusive, non-transferable,
-   revocable license to install and use Wavehop on computers you own or
-   control, for private or business use, free of charge. You may make copies
-   for backup and may redistribute the unmodified installer or portable ZIP as
+   The Publisher grants you, whether you are an individual or an organization,
+   a non-exclusive, non-transferable license to install and use Wavehop on
+   computers you own or control, for private or business use, free of charge.
+   An organization may permit its personnel to use Wavehop on computers the
+   organization owns or controls for its internal business purposes. You may
+   make copies for backup and may redistribute the unmodified installer as
    published by the Publisher, free of charge.
 
 4. Restrictions
@@ -34,10 +39,20 @@ you do not accept it, do not install or use Wavehop.
    third-party owners. This agreement does not transfer ownership.
 
 6. Updates
-   Wavehop checks for updates automatically. It contacts the Publisher's update
-   feed (hosted on GitHub) when it starts and periodically. You can turn
-   automatic update checks off in Wavehop. Updates are signed; Wavehop installs
-   only updates with a valid signature. See PRIVACY.md for what a check reveals.
+   Wavehop can check for updates automatically. It does not do so the first
+   time you start it. At a later start it asks whether it may, unless this has
+   already been set. If automatic checks are on, Wavehop contacts the
+   Publisher's update feed (hosted on GitHub) at a start when a check is due and
+   about once a day while it runs. You can turn automatic update checks off in
+   Wavehop, and you can check yourself at any time.
+
+   A check does not install anything. If it finds a new version, Wavehop shows
+   it with its release notes. The installer is downloaded only if you choose to
+   install the update, and an update started this way runs without showing this
+   agreement. See PRIVACY.md for what a check reveals.
+
+   The Publisher has no obligation to provide support, maintenance or updates,
+   except as required by applicable law.
 
 7. Crash and problem reports (opt-in)
    Wavehop can send crash reports and problem reports with log files to the
@@ -53,10 +68,11 @@ you do not accept it, do not install or use Wavehop.
 
 9. Limitation of liability
    To the extent permitted by applicable law, the Publisher is not liable for
-   any indirect, incidental or consequential damages, loss of data or loss of
-   profits arising from the use of or inability to use Wavehop. Liability for
-   unlawful intent or gross negligence, and any other liability that cannot be
-   excluded by law, remains unaffected.
+   any direct or indirect damage, including incidental and consequential damage,
+   loss of data and loss of profits, arising from the use of or inability to use
+   Wavehop. Liability for damage caused intentionally or through gross
+   negligence, and any other liability that applicable law does not allow the
+   Publisher to exclude, remains unaffected.
 
 10. Third-party trademarks
    AirPlay, HomePod, Bonjour and Apple are trademarks of Apple Inc. Other names
@@ -70,16 +86,19 @@ you do not accept it, do not install or use Wavehop.
 
 12. Changes
    The Publisher may publish a new version of this agreement with a new
-   Wavehop version. Continued use of that version means you accept it. If you
-   do not accept the new version of the agreement, do not install the update;
-   the version you already have stays under the agreement you accepted for it.
+   Wavehop version. If it does, the release notes of that version say so and
+   link to the new agreement, so that you can read it before you install the
+   update. By installing or using that version you accept the new agreement. If
+   you do not accept it, do not install the update; the version you already have
+   stays under the agreement you accepted for it.
 
 13. Governing law and venue
    This agreement is governed by Swiss law, excluding its conflict-of-laws
    rules and the UN Convention on Contracts for the International Sale of Goods.
-   The courts at the Publisher's place of residence in Switzerland have
-   jurisdiction, subject to mandatory consumer-protection rules that give you
-   another venue.
+   This choice of law does not deprive consumers of mandatory protections under
+   the law that would otherwise apply. The courts at the Publisher's place of
+   residence in Switzerland have jurisdiction, subject to mandatory
+   consumer-protection rules that give you another venue.
 
 14. Severability and entire agreement
    If a provision is invalid, the rest of this agreement stays in force. This

@@ -11,7 +11,7 @@ Wavehop is **free** (closed source). [Download the newest release](https://githu
 - Streams all system audio to one or more AirPlay speakers (AirPlay 1 and AirPlay 2).
 - Multi-room: pick several AirPlay 2 speakers and they play in sync. AirPlay 1 receivers play one at a time.
 - Volume control, low-latency mode (single speaker), start with Windows, automatic reconnect after a lost connection.
-- Automatic, signed updates (can be turned off).
+- Automatic update checks, if you allow them (can be turned off).
 - Available in English, German, French, Spanish, Japanese, Simplified Chinese and Korean.
 
 ## System requirements
@@ -32,7 +32,7 @@ Other AirPlay speakers should work but are untested. If yours works or fails, te
 
 ## Install
 
-1. Download `Wavehop-<version>-win64-setup.exe` from the newest entry on the [releases page](https://github.com/drsvenkuehn/wavehop-releases/releases). (Prefer no installer? Use the `...-portable.zip` and run `Wavehop.exe`.)
+1. Download `Wavehop-<version>-win64-setup.exe` from the newest entry on the [releases page](https://github.com/drsvenkuehn/wavehop-releases/releases).
 2. Run it. Windows may show a SmartScreen warning, see below.
 3. Wavehop appears in the system tray (click the `^` if hidden). Click it and choose a speaker.
 
@@ -43,8 +43,7 @@ Beta builds are **not code-signed yet**. A signing certificate costs money and b
 1. Click **More info**.
 2. Click **Run anyway**.
 
-You can check the download is the one published here: it comes only from this repository's Releases page. Updates inside Wavehop are cryptographically signed and verified before they install.
-
+You can check the download is the one published here: it comes only from this repository's Releases page.
 ## Known issues (beta)
 
 - Long-duration (multi-hour) stability and some speaker models have not been tested yet.

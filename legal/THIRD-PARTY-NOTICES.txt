@@ -1,5 +1,5 @@
 Wavehop - Third-Party Notices
-Document version: 1.0 (draft for beta), 2026-11-22
+Document version: 1.1, 2026-11-26
 
 Wavehop is proprietary software (see EULA.txt). It includes the third-party
 components listed below. Each component is used under its own license; the
@@ -65,7 +65,7 @@ Source: third_party/speexdsp (vendored source)
 Component-ID: winsparkle
 Name: WinSparkle
 Version: 0.9.4
-Copyright: Copyright (c) 2009-2025 Vaclav Slavik
+Copyright: Copyright (c) 2009-2026 Vaclav Slavik
 License: MIT (text in Part 2)
 Shipped: yes
 Source: https://winsparkle.org/ (prebuilt WinSparkle.dll, dynamically linked)
@@ -73,7 +73,7 @@ Source: https://winsparkle.org/ (prebuilt WinSparkle.dll, dynamically linked)
 Component-ID: expat
 Name: Expat XML parser (bundled inside WinSparkle.dll)
 Version: as bundled with WinSparkle 0.9.4
-Copyright: Copyright (c) 1998-2000 Thai Open Source Software Center Ltd and Clark Cooper; Copyright (c) 2001-2017 Expat maintainers
+Copyright: Copyright (c) 1998-2000 Thai Open Source Software Center Ltd and Clark Cooper; Copyright (c) 2001-2025 Expat maintainers
 License: MIT (text in Part 2)
 Shipped: yes
 Source: bundled with WinSparkle
@@ -89,10 +89,74 @@ Source: https://github.com/getsentry/sentry-native (FetchContent, crashpad backe
 Component-ID: crashpad
 Name: Crashpad (with its bundled mini_chromium and zlib)
 Version: as bundled by sentry-native 0.17.7 (getsentry/crashpad 722d1c76; mini_chromium 2f5c168f; zlib fef58692)
-Copyright: Copyright 2014 The Crashpad Authors; Copyright 2014 The Chromium Authors (mini_chromium); Copyright (c) 1995-2024 Jean-loup Gailly and Mark Adler (zlib)
+Copyright: Copyright 2014 The Crashpad Authors; Copyright 2014 The Chromium Authors (mini_chromium); Copyright (c) 1995-2022 Jean-loup Gailly and Mark Adler (zlib)
 License: Apache-2.0 (Crashpad); BSD-3-Clause (mini_chromium); zlib (zlib) (texts in Part 2)
 Shipped: yes
 Source: bundled with sentry-native (crashpad_handler.exe)
+
+Component-ID: jsmn
+Name: jsmn JSON parser (inside Wavehop.exe, part of sentry-native)
+Version: as bundled by sentry-native 0.17.7
+Copyright: Copyright (c) 2010 Serge Zaitsev
+License: MIT (text in Part 2)
+Shipped: yes
+Source: https://github.com/zserge/jsmn
+
+Component-ID: mpack
+Name: MPack (inside Wavehop.exe and crashpad_handler.exe)
+Version: as bundled by sentry-native 0.17.7
+Copyright: Copyright (c) 2015-2018 Nicholas Fraser; Copyright (c) 2015-2021 Nicholas Fraser and the MPack authors
+License: MIT (text in Part 2)
+Shipped: yes
+Source: https://github.com/ludocode/mpack
+
+Component-ID: getopt
+Name: getopt by Gregory Pietsch (inside crashpad_handler.exe)
+Version: as bundled with Crashpad
+Copyright: Copyright (C) 1997 Gregory Pietsch
+License: Public domain, with credit to the author (statement in Part 2)
+Shipped: yes
+Source: bundled with Crashpad
+
+Component-ID: icu-utf
+Name: ICU UTF macros (inside crashpad_handler.exe, part of mini_chromium)
+Version: as bundled with mini_chromium
+Copyright: Copyright (c) 1991-2017 Unicode, Inc.; Copyright (c) 1995-2016 International Business Machines Corporation and others
+License: Unicode / ICU License (text in Part 2)
+Shipped: yes
+Source: bundled with Crashpad
+
+Component-ID: wxwidgets
+Name: wxWidgets (inside WinSparkle.dll)
+Version: 3.2.10 (commit aa1a25e7, as pinned by WinSparkle 0.9.4)
+Copyright: Copyright (c) 1998-2005 Julian Smart, Robert Roebling et al
+License: wxWindows Library Licence 3.1 (text in Part 2)
+Shipped: yes
+Source: https://github.com/wxWidgets/wxWidgets
+
+Component-ID: ed25519
+Name: ed25519 (inside WinSparkle.dll)
+Version: commit 7fa6712e, as pinned by WinSparkle 0.9.4
+Copyright: Copyright (c) 2015 Orson Peters
+License: zlib-style (text in Part 2)
+Shipped: yes
+Source: https://github.com/orlp/ed25519
+
+Component-ID: openssl-winsparkle
+Name: OpenSSL libcrypto 1.0.2u (inside WinSparkle.dll)
+Version: 1.0.2u (commit e818b74b, as pinned by WinSparkle 0.9.4)
+Copyright: Copyright (c) 1998-2018 The OpenSSL Project; Copyright (C) 1995-1998 Eric Young
+License: OpenSSL License and original SSLeay License (texts in Part 2)
+Shipped: yes
+Source: https://www.openssl.org/
+
+Component-ID: webview2-loader
+Name: Microsoft Edge WebView2 loader (inside WinSparkle.dll)
+Version: 1.0.3967.48
+Copyright: Copyright (C) Microsoft Corporation
+License: BSD-3-Clause, Microsoft (text in Part 2)
+Shipped: yes
+Source: NuGet package Microsoft.Web.WebView2
 
 ================================================================================
 PART 1b - BUILD AND TEST TOOLING (NOT SHIPPED)
@@ -104,7 +168,7 @@ Version: v1.18.0
 Copyright: Copyright 2008, Google Inc.
 License: BSD-3-Clause
 Shipped: no
-Source: https://github.com/google/googletest (unit tests only, not in the installer or ZIP)
+Source: https://github.com/google/googletest (unit tests only, not in the installer)
 
 NSIS (installer compiler) is a build tool; no NSIS code is included in the
 installer payload beyond the stub licensed under the zlib/libpng license.
@@ -114,7 +178,7 @@ PART 2 - LICENSE TEXTS
 ================================================================================
 
 --------------------------------------------------------------------------------
-MIT License (nlohmann_json, WinSparkle, Expat, sentry-native)
+MIT License (nlohmann_json, WinSparkle, Expat, sentry-native, jsmn, MPack)
 --------------------------------------------------------------------------------
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
@@ -260,3 +324,338 @@ If the Work includes a "NOTICE" text file as part of its distribution, then any 
 8. Limitation of Liability. In no event and under no legal theory, whether in tort (including negligence), contract, or otherwise, unless required by applicable law (such as deliberate and grossly negligent acts) or agreed to in writing, shall any Contributor be liable to You for damages, including any direct, indirect, special, incidental, or consequential damages of any character arising as a result of this License or out of the use or inability to use the Work (including but not limited to damages for loss of goodwill, work stoppage, computer failure or malfunction, or any and all other commercial damages or losses), even if such Contributor has been advised of the possibility of such damages.
 
 9. Accepting Warranty or Additional Liability. While redistributing the Work or Derivative Works thereof, You may choose to offer, and charge a fee for, acceptance of support, warranty, indemnity, or other liability obligations and/or rights consistent with this License. However, in accepting such obligations, You may act only on Your own behalf and on Your sole responsibility, not on behalf of any other Contributor, and only if You agree to indemnify, defend, and hold each Contributor harmless for any liability incurred by, or claims asserted against, such Contributor by reason of your accepting any such warranty or additional liability.
+
+--------------------------------------------------------------------------------
+getopt (crashpad_handler.exe)
+--------------------------------------------------------------------------------
+
+Copyright (C) 1997 Gregory Pietsch
+
+[These files] are hereby placed in the public domain without restrictions. Just
+give the author credit, don't claim you wrote it or prevent anyone else from
+using it.
+
+--------------------------------------------------------------------------------
+Unicode / ICU License (ICU UTF macros)
+--------------------------------------------------------------------------------
+
+COPYRIGHT AND PERMISSION NOTICE (ICU 58 and later)
+
+Copyright © 1991-2017 Unicode, Inc. All rights reserved.
+Distributed under the Terms of Use in http://www.unicode.org/copyright.html
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Unicode data files and any associated documentation
+(the "Data Files") or Unicode software and any associated documentation
+(the "Software") to deal in the Data Files or Software
+without restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, and/or sell copies of
+the Data Files or Software, and to permit persons to whom the Data Files
+or Software are furnished to do so, provided that either
+(a) this copyright and permission notice appear with all copies
+of the Data Files or Software, or
+(b) this copyright and permission notice appear in associated
+Documentation.
+
+THE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF
+ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT OF THIRD PARTY RIGHTS.
+IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS
+NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL
+DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE,
+DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THE DATA FILES OR SOFTWARE.
+
+Except as contained in this notice, the name of a copyright holder
+shall not be used in advertising or otherwise to promote the sale,
+use or other dealings in these Data Files or Software without prior
+written authorization of the copyright holder.
+
+---------------------
+
+Third-Party Software Licenses
+
+This section contains third-party software notices and/or additional
+terms for licensed third-party software components included within ICU
+libraries.
+
+1. ICU License - ICU 1.8.1 to ICU 57.1
+
+COPYRIGHT AND PERMISSION NOTICE
+
+Copyright (c) 1995-2016 International Business Machines Corporation and others
+All rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, and/or sell copies of the Software, and to permit persons
+to whom the Software is furnished to do so, provided that the above
+copyright notice(s) and this permission notice appear in all copies of
+the Software and that both the above copyright notice(s) and this
+permission notice appear in supporting documentation.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF THIRD PARTY RIGHTS. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR
+HOLDERS INCLUDED IN THIS NOTICE BE LIABLE FOR ANY CLAIM, OR ANY
+SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER
+RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF
+CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Except as contained in this notice, the name of a copyright holder
+shall not be used in advertising or otherwise to promote the sale, use
+or other dealings in this Software without prior written authorization
+of the copyright holder.
+
+All trademarks and registered trademarks mentioned herein are the
+property of their respective owners.
+
+--------------------------------------------------------------------------------
+wxWindows Library Licence 3.1 (wxWidgets)
+--------------------------------------------------------------------------------
+
+                wxWindows Library Licence, Version 3.1
+                ======================================
+
+  Copyright (c) 1998-2005 Julian Smart, Robert Roebling et al
+
+  Everyone is permitted to copy and distribute verbatim copies
+  of this licence document, but changing it is not allowed.
+
+                       WXWINDOWS LIBRARY LICENCE
+     TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+
+  This library is free software; you can redistribute it and/or modify it
+  under the terms of the GNU Library General Public Licence as published by
+  the Free Software Foundation; either version 2 of the Licence, or (at
+  your option) any later version.
+
+  This library is distributed in the hope that it will be useful, but
+  WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Library
+  General Public Licence for more details.
+
+  You should have received a copy of the GNU Library General Public Licence
+  along with this software, usually in a file named COPYING.LIB.  If not,
+  write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+  Boston, MA 02110-1301 USA.
+
+  EXCEPTION NOTICE
+
+  1. As a special exception, the copyright holders of this library give
+  permission for additional uses of the text contained in this release of
+  the library as licenced under the wxWindows Library Licence, applying
+  either version 3.1 of the Licence, or (at your option) any later version of
+  the Licence as published by the copyright holders of version
+  3.1 of the Licence document.
+
+  2. The exception is that you may use, copy, link, modify and distribute
+  under your own terms, binary object code versions of works based
+  on the Library.
+
+  3. If you copy code from files distributed under the terms of the GNU
+  General Public Licence or the GNU Library General Public Licence into a
+  copy of this library, as this licence permits, the exception does not
+  apply to the code that you add in this way.  To avoid misleading anyone as
+  to the status of such modified files, you must delete this exception
+  notice from such code and/or adjust the licensing conditions notice
+  accordingly.
+
+  4. If you write modifications of your own for this library, it is your
+  choice whether to permit this exception to apply to your modifications.
+  If you do not wish that, you must delete the exception notice from such
+  code and/or adjust the licensing conditions notice accordingly.
+
+--------------------------------------------------------------------------------
+ed25519 license
+--------------------------------------------------------------------------------
+
+Copyright (c) 2015 Orson Peters <orsonpeters@gmail.com>
+
+This software is provided 'as-is', without any express or implied warranty. In no event will the
+authors be held liable for any damages arising from the use of this software.
+
+Permission is granted to anyone to use this software for any purpose, including commercial
+applications, and to alter it and redistribute it freely, subject to the following restrictions:
+
+1. The origin of this software must not be misrepresented; you must not claim that you wrote the
+   original software. If you use this software in a product, an acknowledgment in the product
+   documentation would be appreciated but is not required.
+
+2. Altered source versions must be plainly marked as such, and must not be misrepresented as
+   being the original software.
+
+3. This notice may not be removed or altered from any source distribution.
+
+--------------------------------------------------------------------------------
+OpenSSL License and original SSLeay License (OpenSSL 1.0.2u in WinSparkle.dll)
+--------------------------------------------------------------------------------
+
+This product includes software developed by the OpenSSL Project
+for use in the OpenSSL Toolkit (http://www.openssl.org/).
+This product includes cryptographic software written by
+Eric Young (eay@cryptsoft.com).
+
+  LICENSE ISSUES
+  ==============
+
+  The OpenSSL toolkit stays under a double license, i.e. both the conditions of
+  the OpenSSL License and the original SSLeay license apply to the toolkit.
+  See below for the actual license texts. Actually both licenses are BSD-style
+  Open Source licenses. In case of any license issues related to OpenSSL
+  please contact openssl-core@openssl.org.
+
+  OpenSSL License
+  ---------------
+
+/* ====================================================================
+ * Copyright (c) 1998-2018 The OpenSSL Project.  All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer. 
+ *
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in
+ *    the documentation and/or other materials provided with the
+ *    distribution.
+ *
+ * 3. All advertising materials mentioning features or use of this
+ *    software must display the following acknowledgment:
+ *    "This product includes software developed by the OpenSSL Project
+ *    for use in the OpenSSL Toolkit. (http://www.openssl.org/)"
+ *
+ * 4. The names "OpenSSL Toolkit" and "OpenSSL Project" must not be used to
+ *    endorse or promote products derived from this software without
+ *    prior written permission. For written permission, please contact
+ *    openssl-core@openssl.org.
+ *
+ * 5. Products derived from this software may not be called "OpenSSL"
+ *    nor may "OpenSSL" appear in their names without prior written
+ *    permission of the OpenSSL Project.
+ *
+ * 6. Redistributions of any form whatsoever must retain the following
+ *    acknowledgment:
+ *    "This product includes software developed by the OpenSSL Project
+ *    for use in the OpenSSL Toolkit (http://www.openssl.org/)"
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE OpenSSL PROJECT ``AS IS'' AND ANY
+ * EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ * PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE OpenSSL PROJECT OR
+ * ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+ * NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+ * STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+ * OF THE POSSIBILITY OF SUCH DAMAGE.
+ * ====================================================================
+ *
+ * This product includes cryptographic software written by Eric Young
+ * (eay@cryptsoft.com).  This product includes software written by Tim
+ * Hudson (tjh@cryptsoft.com).
+ *
+ */
+
+ Original SSLeay License
+ -----------------------
+
+/* Copyright (C) 1995-1998 Eric Young (eay@cryptsoft.com)
+ * All rights reserved.
+ *
+ * This package is an SSL implementation written
+ * by Eric Young (eay@cryptsoft.com).
+ * The implementation was written so as to conform with Netscapes SSL.
+ * 
+ * This library is free for commercial and non-commercial use as long as
+ * the following conditions are aheared to.  The following conditions
+ * apply to all code found in this distribution, be it the RC4, RSA,
+ * lhash, DES, etc., code; not just the SSL code.  The SSL documentation
+ * included with this distribution is covered by the same copyright terms
+ * except that the holder is Tim Hudson (tjh@cryptsoft.com).
+ * 
+ * Copyright remains Eric Young's, and as such any Copyright notices in
+ * the code are not to be removed.
+ * If this package is used in a product, Eric Young should be given attribution
+ * as the author of the parts of the library used.
+ * This can be in the form of a textual message at program startup or
+ * in documentation (online or textual) provided with the package.
+ * 
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ * 3. All advertising materials mentioning features or use of this software
+ *    must display the following acknowledgement:
+ *    "This product includes cryptographic software written by
+ *     Eric Young (eay@cryptsoft.com)"
+ *    The word 'cryptographic' can be left out if the rouines from the library
+ *    being used are not cryptographic related :-).
+ * 4. If you include any Windows specific code (or a derivative thereof) from 
+ *    the apps directory (application code) you must include an acknowledgement:
+ *    "This product includes software written by Tim Hudson (tjh@cryptsoft.com)"
+ * 
+ * THIS SOFTWARE IS PROVIDED BY ERIC YOUNG ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ * 
+ * The licence and distribution terms for any publically available version or
+ * derivative of this code cannot be changed.  i.e. this code cannot simply be
+ * copied and put under another distribution licence
+ * [including the GNU Public Licence.]
+ */
+
+--------------------------------------------------------------------------------
+Microsoft WebView2 loader license
+--------------------------------------------------------------------------------
+
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+   * Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+   * Redistributions in binary form must reproduce the above
+copyright notice, this list of conditions and the following disclaimer
+in the documentation and/or other materials provided with the
+distribution.
+   * The name of Microsoft Corporation, or the names of its contributors 
+may not be used to endorse or promote products derived from this
+software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
